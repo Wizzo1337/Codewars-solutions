@@ -16,5 +16,16 @@
 // printer_error(s) => "8/22"
 
 function printerError(s) {
-    
+	let strArr = s.split('')
+	let totalNumLetters = strArr.length
+	let totalMatch = 0
+	let regexNZ = /[n-z]/gi
+	for (let i = 0; i < strArr.length; i++) {
+		if (s[i].match(regexNZ)) {
+			totalMatch++
+		}
+	}
+	return `${totalMatch}/${totalNumLetters}`
 }
+
+console.log(printerError('mxyz'), '1/4');
