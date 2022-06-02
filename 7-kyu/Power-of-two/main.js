@@ -12,11 +12,13 @@
 // Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 0 is not a power of 2.
 
 function isPowerOfTwo(n){
+	let notPowerOf2 = 0
 	for (let i = 0; i <= n; i++) {
 		let powerOf2 = Math.pow(2, i)
 		if (Math.pow(2, n) === powerOf2) return true
-		
+
 	}
+	return false
 }
 
 console.log(isPowerOfTwo(2), true);
